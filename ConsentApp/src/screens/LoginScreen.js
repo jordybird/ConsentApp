@@ -23,9 +23,10 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Password"
         secureTextEntry
       />
-      <TouchableOpacity style={styles.loginButton} onPress={() => console.log('Login logic here')}>
-        <Text style={styles.loginButtonText}>Login</Text>
-      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('MainScreen')}>
+  <Text style={styles.loginButtonText}>Login</Text>
+</TouchableOpacity>
+
       <View style={styles.dividerContainer}>
         <View style={styles.dividerLine} />
         <Text style={styles.dividerText}>or</Text>
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E0B0FF',
     borderRadius: 20,
     width: '85%',
-    paddingVertical: 10,
+    paddingVertical: 15,
   },
   loginButtonText: {
     color: '#FFFFFF',
